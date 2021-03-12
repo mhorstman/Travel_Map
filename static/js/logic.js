@@ -3,6 +3,7 @@ var myMap = L.map("travelmap", {
   center: [20.0, 0.0],
   zoom: 2
 });
+
 // Define API Key for Mapbox
 const API_KEY = "pk.eyJ1IjoibWhvcnN0bWFuIiwiYSI6ImNrbTE3czljajEwYXUycG1ydDc4MTVnc28ifQ.7ahduH_7wwawalS2_83XHg";
 
@@ -14,7 +15,7 @@ lightMap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?
   zoomOffset: -1,
   id: "mapbox/light-v10",
   accessToken: API_KEY
-}).addTo(myMap);
+});
 streetsMap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
   attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
   tileSize: 512,
@@ -22,7 +23,7 @@ streetsMap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y
   zoomOffset: -1,
   id: "mapbox/streets-v11",
   accessToken: API_KEY
-});
+}).addTo(myMap);
 
 // Link to world country GeoJSON data
 var countryGeoJson = "https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json";
@@ -114,7 +115,7 @@ var pinIcon = L.icon({
 destinationsData.forEach(function(destination) {
   destination.cities.forEach(function(city) {
     L.marker([city.lat, city.lng], {icon: pinIcon})
-    .bindPopup("<h4>"+city.name+"</h4>")
+    .bindPopup("<h6>"+city.name+"</h6>")
     .addTo(citiesOverlay);
   });
 });

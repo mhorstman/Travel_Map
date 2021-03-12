@@ -12,16 +12,87 @@
       crossorigin=""></script>
     <!-- d3 JavaScript -->
     <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"/>
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
   </head>
 
   <body>
-    <!-- map div -->
-    <div id="travelmap"></div>
+    <!-- Container -->
+    <div class="container">
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1><b>Mike's Travel Adventures</b></h1>
+        <p class="lead"><b>Seeing the world, one trip at a time</b></p>
+      </div>
+
+      <!-- Main Content-->
+      <div class="masthead">
+        <div class = "row justify-content-md-center">
+          <div class="col-md-11" id="features">
+            <h4>Introduction</h4>
+            <p>I have a personal passion for travel and a professional passion in making 
+              data easy to understand through clear visualizations. Developing this site 
+              enabled me to explore both of these passions and I'm happy to share the results.
+              The interactive map below uses JavaScript to highlight 
+              the countries and US states I've visited, and  
+              adds a pin in cities I've experienced. Please feel free to explore.</p>
+          </div>
+        </div>
+        <!-- Navigation -->
+        <nav>
+          <a class="navbar-brand" href="index.html">Reset Map</a>
+        </nav>
+        <div class="row">
+          <div class="col-md-12">
+            <div id="travelmap"></div>
+            <div id="geocoder-container"></div>
+          </div>
+        </div>
+        <hr>
+        <div class = "row justify-content-md-center">
+          <div class="col-md-11" id="features">
+            <h4>Interactive Map Options</h4>
+            <div class = "row">
+              <div class="col-md-3">
+                <h6>Map Base Layers</h6>
+                <li>Streets Map View</li>
+                <li>Light Map View</li>
+              </div>
+              <div class="col-md-3">
+                <h6>Map Overlay Layers</h6>
+                <li>Countries Vitisted</li>
+                <li>US States Visited</li>
+                <li>Cities Vistited</li>
+              </div>
+              <div class="col-md-5">
+                <h6>Mouse Clicks</h6>
+                <li>Click on a highlighted country to zoom in</li>
+                <li>Click on pin marker to see city name</li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Site footer -->
+      <footer class="footer">
+        <p>&copy; 2021 - Mike Horstman Designs</p>
+      </footer>
+
+    </div> <!-- /container -->
+
     <!-- Travel Destination Data -->
     <script src="static/data/destinations.js"></script>
     <!-- JS  -->
     <script type="text/javascript" src="static/js/logic.js"></script>
+
   </body>
+
 </html>
