@@ -9,3 +9,6 @@ This site displays an interactive map of countries, U.S. states and cities I've 
 - **Map Base Layers:** Streets Map View; Light Map View
 - **Map Overlay Layers:** Countries Vitisted; US States Visited; Cities Vistited
 - **Mouse Clicks:** Click on a highlighted country to zoom in; Click on pin marker to see city name
+
+The following shows a screen shot of the interactive travel map showing countries, states and cities visited.
+![Map Screen Shot](https://github.com/mhorstman/Travel_Map/blob/main/Map_Screen_Shot.png)
